@@ -1,1 +1,1 @@
-web:gunicorn main:app --bind 0.0.0.0:${5000}
+web: gunicorn -w 4 -b 0.0.0.0:$PORT -k gevent main:app
